@@ -1,0 +1,166 @@
+﻿<html>
+  <head>
+       <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Links 🦋</title>
+     <link rel="icon" href="https://4knu.github.io/zoo/1.ico" type="image/x-icon">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300&display=swap');
+
+        html {
+           background: rgb(255,255,255);
+background: -moz-linear-gradient(11deg, rgba(255,255,255,1) 0%, rgba(250,139,139,1) 82%, rgba(255,83,83,1) 150%);
+background: -webkit-linear-gradient(11deg, rgba(255,255,255,1) 0%, rgba(250,139,139,1) 82%, rgba(255,83,83,1) 150%);
+background: linear-gradient(11deg, rgba(255,255,255,1) 0%, rgba(250,139,139,1) 82%, rgba(255,83,83,1) 150%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ff5353",GradientType=1); 
+        }
+      
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        table {
+            width: 80%;
+            height: 80%;
+            margin: 3vh auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        tr:last-child td {
+            text-align: right;
+        }
+        
+        a {
+            text-decoration:none;
+            color: white;
+        }
+        
+        a:link{color:inherit}
+        a:active{color:inherit}
+        a:visited{color:inherit}
+        a:hover{color:inherit}
+
+        .gif-cell {
+            width: 30%;
+        }
+
+        .gif-cell img {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+        }
+
+       .text-cell {
+       font-size: 1.6vh;
+       }
+    </style>
+</head>
+<body>
+    <table>
+        <tr class="wide-row">
+<td class="gif-cell">
+                <a href="tel:+380442393277">
+                <img src="https://4knu.github.io/zoo/sqr_phone.png">
+                <p class="text-cell"><b>Телефон</b></p>
+                </a>
+            </td>
+    <td></td>
+             <td class="gif-cell">
+                <span onclick="copyToClipboard('phone_number')">
+                <img src="https://4knu.github.io/zoo/sqr_copy.png">
+                <p class="text-cell"><b>Скопіювати</b></p>
+                  </span>
+                </a>
+            </td>
+        </tr>
+         <tr class="wide-row">
+        <td class="gif-cell">
+                <a href="mailto:zmku@univ.kiev.ua">
+                <img src="https://4knu.github.io/zoo/sqr_mail.png">
+                <p class="text-cell"><b>Пошта</b></p>
+                </a>
+            </td>
+     <td></td>
+             <td class="gif-cell">
+                <span onclick="copyToClipboard('official_mail')">
+                <img src="https://4knu.github.io/zoo/sqr_copy.png">
+                <p class="text-cell"><b>Скопіювати</b></p>
+                  </span>
+                </a>
+            </td>
+        </tr>
+           <tr class="wide-row">
+        <td class="gif-cell">
+                <a href="https://maps.app.goo.gl/xr8LJvWaXwNu9QJd6">
+                <img src="https://4knu.github.io/zoo/sqr_map.png">
+                <p class="text-cell"><b>Адреса</b></p>
+                </a>
+            </td>
+         <td></td>
+             <td class="gif-cell">
+                <span onclick="copyToClipboard('location')">
+                <img src="https://4knu.github.io/zoo/sqr_copy.png">
+                <p class="text-cell"><b>Скопіювати</b></p>
+                  </span>
+                </a>
+            </td>
+        </tr>
+           <tr class="wide-row">
+        <td class="gif-cell">
+                <a href="http://museums.univ.kiev.ua/zoology.php">
+                <img src="https://4knu.github.io/zoo/sqr_book.png">
+                <p class="text-cell"><b>Сайт</b></p>
+                </a>
+            </td>
+                <td></td>
+             <td class="gif-cell">
+                <span onclick="copyToClipboard('more_info')">
+                <img src="https://4knu.github.io/zoo/sqr_copy.png">
+                <p class="text-cell"><b>Скопіювати</b></p>
+                </span>
+            </td>
+        </tr>
+       <tr>
+<td class="gif-cell">
+                <a href="https://4knu.github.io/zoo"><p class="text-cell" style="text-align: left;"><b>Назад до 3D</b></a>
+            </td>
+            <td>
+            </td>
+              <td class="gif-cell">
+                <a href="https://4knu.github.io/zoo/contacts_zoo.pdf" download><p class="text-cell"><b>Зберегти у PDF</b></a>
+                </a>
+            </td>
+        </tr>
+    </table>
+     <div style="display: none;">
+      <span id="phone_number">+38(044)239-32-77</span>
+      <span id="official_mail">zmku@univ.kiev.ua</span>
+      <span id="location">https://maps.app.goo.gl/xr8LJvWaXwNu9QJd6</span>
+      <span id="more_info">http://museums.univ.kiev.ua/zoology.php</span>
+     </div>
+   <script>
+    function copyToClipboard(elementId) {
+      var text = document.getElementById(elementId).innerText;
+      var input = document.createElement("input");
+      input.style.position = "fixed";
+      input.style.opacity = 0;
+      input.value = text;
+      document.body.appendChild(input);
+      input.select();
+      input.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      document.body.removeChild(input);
+      alert(text + " скопійовано!");
+    }
+  </script>
+  </body>
+</html>
